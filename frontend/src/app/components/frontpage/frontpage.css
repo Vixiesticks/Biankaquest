@@ -1,0 +1,68 @@
+@media only screen and (min-width: 993px) {
+  .grid {
+    padding: .5em;
+  }
+}
+
+.grid {
+  /*display: -ms-grid;**/
+  display: grid;
+  /*-ms-grid-columns: 1fr 1fr 1fr;**/
+  grid-template-columns: repeat(3, [col] 1fr);
+  background-color: #c6c6c6;
+}
+
+main {
+  display: block;
+  unicode-bidi: isolate;
+}
+
+@media only screen and (min-width: 993px) {
+  .grid-projects {
+    grid-row: 1;
+    grid-column: col 1 / span 2;
+    margin-right: .25em;
+  }
+}
+.grid-projects {
+  -ms-grid-row: 1;
+  grid-row: 1;
+}
+
+@media only screen and (min-width: 993px) {
+  .grid-side {
+    grid-row: 1;
+    grid-column: col 3 / span 1;
+    margin-left: .25em;
+  }
+}
+.grid-side {
+  -ms-grid-row: 2;
+  grid-row: 2;
+}
+
+/*The Projects Section*/
+.project-splash {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+
+/*Project Cards**/
+@media only screen and (min-width: 993px) {
+    .project {
+        padding: 0;
+        border: .5em solid #eee;
+        margin: .25em auto;
+        position: relative;
+    }
+}
+.project {
+    padding-top: 1em;
+    padding-bottom: .5em;
+    border-bottom: 4px solid #000;
+    background-color: #eee;
+    display: block;
+}

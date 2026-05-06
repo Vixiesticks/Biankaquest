@@ -11,9 +11,9 @@ import Comics from '../interfaces/comics';
 export class ComicDataService {
   constructor(private _http: HttpClient) {}
 
-  find(): Observable<Comics> {
-    return this._http.get<Comics>(
-      `http://localhost:5000/api/v1/comics`
+  getAll(): Observable<Comic[]> {
+    return this._http.get<Comic[]>(
+      `http://localhost:5000/api/Biankaquest/comics`
     );
   }
 
