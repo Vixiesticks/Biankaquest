@@ -9,6 +9,7 @@ import { RouterLink } from '@angular/router';
 @Component({
   selector: 'app-frontpage',
   imports: [
+    RouterLink,
     CommonModule
   ],
   templateUrl: './frontpage.html',
@@ -21,10 +22,10 @@ export class Frontpage {
   constructor(private _comicDataService: ComicDataService) {}
 
   ngOnInit() {
-    this.subscriptionComics = this._comicDataService.getAll()
-    .subscribe((data) => {
-      this.comics = data;
-    });
+	  this.subscriptionComics = this._comicDataService.find(value!,"name")
+	  .subscribe((data) => {
+	    this.comics = data.comics;
+	  });
   }
 
   ngOnDestroy(): void {
